@@ -1,13 +1,43 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global base styles */
+@layer base {
+  body {
+    @apply bg-cream text-ink font-body text-base;
+  }
+
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-title text-indigo;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a {
+  @apply text-vermilion underline hover:text-indigo transition-colors duration-200;
+}
+
+button {
+  @apply font-accent bg-vermilion text-white px-4 py-2 rounded hover:bg-red-700 transition duration-300;
+}
+
+/* Sticky note base class */
+.sticky-note {
+  @apply bg-sticky border-2 border-stickyBorder rounded-lg p-4 shadow-md 
+         hover:scale-105 hover:-rotate-1 hover:shadow-lg 
+         transition-transform duration-300 ease-in-out;
+}
+
+.dark body {
+  @apply bg-charcoal text-matchaDark;
+}
+
+.dark h1, .dark h2, .dark h3 {
+  @apply text-dustyIndigo;
+}
+
+.dark .sticky-note {
+  @apply bg-stickyDark border-stickyBorderDark;
+}
 }
