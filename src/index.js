@@ -6,11 +6,15 @@ import reportWebVitals from './reportWebVitals';
 import '@fontsource/patrick-hand';
 import '@fontsource/caveat';
 import '@fontsource/gloria-hallelujah';
+import { BrowserRouter } from 'react-router-dom';
+import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <BrowserRouter>
     <App />
+    </BrowserRouter>
   </React.StrictMode>
 );
 
